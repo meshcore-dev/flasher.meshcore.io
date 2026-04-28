@@ -61,6 +61,9 @@
 		"lilygo": {
 			"name": "LilyGo"
 		},
+		"mtoolstec": {
+			"name": "MTools Tec"
+		},
 		"raspberry": {
 			"name": "Raspberry Pi"
 		}
@@ -4645,6 +4648,37 @@
 						"files": {
 							"flash": "Nano_G2_Ultra_companion_radio_ble.*?\\.zip",
 							"download": "Nano_G2_Ultra_companion_radio_ble.*?\\.uf2"
+						}
+					}
+				}
+			]
+		},
+		{
+			"maker": "mtoolstec",
+			"class": "community",
+			"name": "MTools Tec Meshtiny",
+			"icon": "/img/lora.svg",
+			"tooltip": "<img class='device' src='/img/mtoolstec_meshtiny.svg'>",
+			"type": "nrf52",
+			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
+			"firmware": [
+				{
+					"role": "companionBle",
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "Meshtiny_companion_radio_ble.*?\\.zip",
+							"download": "Meshtiny_companion_radio_ble.*?\\.uf2"
+						}
+					}
+				},
+				{
+					"role": "companionUsb",
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "Meshtiny_companion_radio_usb.*?\\.zip",
+							"download": "Meshtiny_companion_radio_usb.*?\\.uf2"
 						}
 					}
 				}
