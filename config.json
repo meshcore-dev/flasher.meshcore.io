@@ -2587,6 +2587,37 @@
 		{
 			"maker": "lilygo",
 			"class": "community",
+			"name": "LilyGo T-Echo Lite (Non-Shell)",
+			"icon": "/img/lora.svg",
+			"type": "nrf52",
+			"erase": "FLASH_ERASE_nrf52_softdevice_v6.zip",
+			"tooltip": "<img class='device' src='/img/lilygo_techo_lite.svg'>",
+			"firmware": [
+				{
+					"role": "companionBle",
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "LilyGo_T-Echo-Lite_non_shell_companion_radio_ble.*?\\.zip",
+							"download": "LilyGo_T-Echo-Lite_non_shell_companion_radio_ble.*?\\.uf2"
+						}
+					}
+				},
+				{
+					"role": "companionUsb",
+					"github": {
+						"type": "companion",
+						"files": {
+							"flash": "LilyGo_T-Echo-Lite_non_shell_companion_radio_usb.*?\\.zip",
+							"download": "LilyGo_T-Echo-Lite_non_shell_companion_radio_usb.*?\\.uf2"
+						}
+					}
+				}
+			]
+		},
+		{
+			"maker": "lilygo",
+			"class": "community",
 			"name": "LilyGo LoRa32 V2.1_1.6",
 			"icon": "/img/lora.svg",
 			"type": "esp32",
