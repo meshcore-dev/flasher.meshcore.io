@@ -7,8 +7,13 @@ import { blobToBinaryString, delay } from './util.js';
 const ESP32_APP_ADDRESS = 0x10000;
 
 export async function downloadFirmware(url) {
-  console.log(`downloading: ${url}`);
-  const res = await fetch(url);
+  const absoluteUrl = new URL(url, location.origin);
+  if(absoluteUrl.protocol !== 'https:') {
+    throw new Error('Refusing to download firmware over an insecure (non-HTTPS) connection.');
+  }
+
+  console.log(`downloading: ${absoluteUrl}`);
+  const res = await fetch(absoluteUrl);
   if(!res.ok) {
     throw new Error(`Could not download the firmware file from the server, reported: HTTP ${res.status}.\nPlease try again.`);
   }

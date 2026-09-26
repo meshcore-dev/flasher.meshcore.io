@@ -9,7 +9,12 @@ export function toSlug(text) {
 }
 
 export async function fetchJson(url) {
-  const res = await fetch(url);
+  const absoluteUrl = new URL(url, location.origin);
+  if(absoluteUrl.protocol !== 'https:') {
+    throw new Error(`Refusing to load ${url} over an insecure (non-HTTPS) connection.`);
+  }
+
+  const res = await fetch(absoluteUrl);
   if(!res.ok) throw new Error(`Could not load ${url}: HTTP ${res.status}`);
 
   return await res.json();
