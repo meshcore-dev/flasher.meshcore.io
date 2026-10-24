@@ -257,6 +257,37 @@
 		},
 		{
 			"maker": "heltec",
+			"name": "Heltec v4.3",
+			"icon": "/img/lora.svg",
+			"type": "esp32",
+			"tooltip": "<img class='device' src='/img/heltec_v4.svg'>",
+			"firmware": [
+				{
+					"class": "community",
+					"role": "companion",
+					"github-zephcore": {
+						"type": "zephcore",
+						"files": {
+							"flash-wipe": "heltec_wifi_lora32_v43-esp32s3-procpu-companion-[^-]+-merged\\.bin",
+							"flash-update": "heltec_wifi_lora32_v43-esp32s3-procpu-companion-[^-]+-update\\.bin"
+						}
+					}
+				},
+				{
+					"class": "community",
+					"role": "repeater",
+					"github-zephcore": {
+						"type": "zephcore",
+						"files": {
+							"flash-wipe": "heltec_wifi_lora32_v43-esp32s3-procpu-repeater-[^-]+-merged\\.bin",
+							"flash-update": "heltec_wifi_lora32_v43-esp32s3-procpu-repeater-[^-]+-update\\.bin"
+						}
+					}
+				}
+			]
+		},
+		{
+			"maker": "heltec",
 			"name": "Heltec Mesh Node T096",
 			"icon": "/img/lora.svg",
 			"type": "nrf52",
